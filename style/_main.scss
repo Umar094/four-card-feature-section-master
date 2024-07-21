@@ -1,0 +1,50 @@
+main{
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    gap: 24px;
+    flex-grow: 1;
+    grid-template-areas:
+        ". card2 ."
+        ". card2 ."
+    "card1 card2 card4"
+    "card1 card2 card4"
+    "card1 card3 card4"
+    "card1 card3 card4"
+        ". card3 ."
+        ". card3 .";
+        
+
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 25px;
+        border-radius: 14px;
+        background-color: hsl(0, 0%, 100%);
+
+        div{
+            text-align: end;
+        }
+    }
+
+    .card1{
+        box-shadow: 0 -3px 0 hsl(180, 62%, 55%), 0px 0px 10px hsl(241, 63%, 16%, 0.3);
+        grid-area: card1;
+    }
+    .card2{
+        box-shadow: 0 -3px 0 hsl(0, 78%, 62%), 0px 0px 10px hsl(241, 63%, 16%, 0.3);
+        grid-area: card2;
+    }
+    .card3{
+        box-shadow: 0 -3px 0 hsl(34, 97%, 64%), 0px 0px 10px hsl(241, 63%, 16%, 0.3);
+        grid-area: card3;
+    }
+    .card4{
+        box-shadow: 0 -3px 0 hsl(212, 86%, 64%), 0px 0px 10px hsl(241, 63%, 16%, 0.3);
+        grid-area: card4;
+    }
+
+}

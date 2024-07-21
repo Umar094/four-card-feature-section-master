@@ -1,1 +1,104 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: hsl(0, 0%, 98%);
+  width: 100%;
+  min-height: 100vh;
+}
+
+.wrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+header article {
+  max-width: 600px;
+  text-align: center;
+}
+header article h1 {
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+}
+header article h1 strong {
+  font-weight: 600;
+  font-size: 2.4rem;
+  color: hsl(234, 12%, 34%);
+}
+header article p {
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+}
+
+main {
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(8, 1fr);
+  gap: 24px;
+  flex-grow: 1;
+  grid-template-areas: ". card2 ." ". card2 ." "card1 card2 card4" "card1 card2 card4" "card1 card3 card4" "card1 card3 card4" ". card3 ." ". card3 .";
+}
+main .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+  border-radius: 14px;
+  background-color: hsl(0, 0%, 100%);
+}
+main .card div {
+  text-align: end;
+}
+main .card1 {
+  box-shadow: 0 -3px 0 hsl(180, 62%, 55%), 0px 0px 10px hsla(241, 63%, 16%, 0.3);
+  grid-area: card1;
+}
+main .card2 {
+  box-shadow: 0 -3px 0 hsl(0, 78%, 62%), 0px 0px 10px hsla(241, 63%, 16%, 0.3);
+  grid-area: card2;
+}
+main .card3 {
+  box-shadow: 0 -3px 0 hsl(34, 97%, 64%), 0px 0px 10px hsla(241, 63%, 16%, 0.3);
+  grid-area: card3;
+}
+main .card4 {
+  box-shadow: 0 -3px 0 hsl(212, 86%, 64%), 0px 0px 10px hsla(241, 63%, 16%, 0.3);
+  grid-area: card4;
+}
+
+@media all and (max-width: 700px) {
+  header article h1 {
+    font-size: 1.7rem;
+  }
+  header article p {
+    font-size: 1rem;
+    margin-bottom: 60px;
+  }
+  main {
+    padding: 0;
+    width: 100%;
+    height: -moz-max-content;
+    height: max-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, minmax(200px, 1fr));
+    grid-template-areas: "card1" "card2" "card3" "card4";
+  }
+  main .card {
+    justify-content: start;
+  }
+}/*# sourceMappingURL=style.css.map */
